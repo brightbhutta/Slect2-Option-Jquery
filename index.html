@@ -1,0 +1,49 @@
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" /> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" /> 
+        <script> 
+            $(document).ready(function () { 
+                //Select2 
+                $(".progLang").select2({ 
+                 tags: true, 
+                 maximumSelectionLength: 2, 
+                 tokenSeparators: [ 
+                     "/", ", ", ";", " ", "#"], 
+                }); 
+                //Chosen 
+                $(".progLang1").chosen({ 
+                    tags: true, 
+                    max_selected_options: 2, 
+                    tokenSeparators: [ 
+                      "/", ", ", ";", " ", "#"], 
+                }); 
+            }); 
+        </script> 
+    </head> 
+    <body> 
+        <form> 
+            <h4>Selections using Select2</h4> 
+            <select class="progLang" 
+                    multiple="true"
+                    style="width: 200px;"> 
+                <option value="py">Python</option> 
+                <option value="ja">Java</option> 
+                <option value="ht">HTML</option> 
+            </select> 
+            <h4>Selections using Chosen</h4> 
+            <select class="progLang1"
+                    multiple="true"
+                    style="width: 200px;"> 
+                <option value="py">Python</option> 
+                <option value="ja">Java</option> 
+                <option value="ht">HTML</option> 
+            </select> 
+        </form> 
+    </body> 
+</html>
